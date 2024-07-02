@@ -20,6 +20,7 @@
         font-size: 1.75rem;
     }
     &__link {
+        transition: 0.3s;
         &:hover, &:active {
             color: $main-color;
         }

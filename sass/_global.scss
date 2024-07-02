@@ -4,10 +4,34 @@
 body {
     font-family: "Rubik", sans-serif;
     font-size: 1.5rem;
+    display: grid;
+    grid-template-rows: auto auto 0;
 }
 
 .container {
     max-width: 90rem;
     margin: 0 auto;
     @include grid($main-padding * 4);
+    padding: 0 2rem;
+}
+
+.top {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #5368df;
+    position: sticky;
+    bottom: 1rem;
+    margin-right: 1rem;
+    margin-top: 100vh;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-self: end;
+}
+.top svg {
+    width: 3rem;
+    height: 3rem;
+    fill: white;
 }

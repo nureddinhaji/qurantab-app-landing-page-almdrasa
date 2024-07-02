@@ -1,0 +1,35 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@media all and (max-width: 650px) {
+    .container {
+        gap: $main-padding * 2;
+    }
+    .header__nav {
+        font-size: 1.5rem;
+    }
+    .main {
+        @extend .container;
+    }
+    .feature {
+        grid-template-columns: 1fr;
+    }
+    .feature__image {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .download__boxes {
+        grid-template-columns: 1fr;
+    }
+    .footer__container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .header {
+        flex-direction:column;
+        gap: 1.5rem;
+    }
+}

@@ -23,3 +23,17 @@
     height: 2rem;
     fill: white;
 }
+
+%h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+%p {
+    color: $text-color;
+}
+
+%p-one-col {
+    text-align: center;
+    max-width: 50rem;
+}

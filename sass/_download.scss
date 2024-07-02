@@ -1,7 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 @use "./extend" as *;
-@use "./main";
 
 .download {
     @extend %flex-center;
@@ -11,16 +10,16 @@
         @extend %flex-center;
         gap: $main-padding;
     }
+    &__h3 {
+        @extend %h3;
+    }
+    &__p {
+        @extend %p;
+        @extend %p-one-col;
+    }
     &__boxes {
         @include grid(4rem, repeat(3, 1fr));
         width: 100%;
-    }
-    &__h3 {
-        @extend .feature__h3;
-    }
-    &__p {
-        @extend .feature__p;
-        text-align: center;
     }
     &__h4 {
         font-size: 2rem;
@@ -40,7 +39,7 @@
         }
         &-footer {
             padding: $main-padding;
-            border-top: 2px dashed #d4d6db;
+            border-top: 2px dashed $second-color;
             @extend %flex-center;
         }
         &-link {

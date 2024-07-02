@@ -15,11 +15,10 @@
         font-weight: 700;
     }
     &__h3 {
-        font-size: 2.5rem;
-        font-weight: 700;
+        @extend %h3;
     }
     &__p {
-        color: $text-color;
+        @extend %p;
     }
     &__links {
         width: 100%;

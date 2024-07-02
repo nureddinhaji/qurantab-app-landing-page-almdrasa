@@ -1,0 +1,52 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./extend" as *;
+
+.faq {
+    @extend %flex-center;
+    gap: $main-padding * 2;
+
+    &__header {
+        @extend %flex-center;
+        gap: $main-padding;
+    }
+    &__h3 {
+        @extend %h3;
+    }
+    &__p {
+        @extend %p;
+        @extend %p-one-col;
+    }
+    &__list {
+        max-width: 50rem;
+        @include flex(column,1rem);
+        &-item {
+            padding: 2rem;
+            border: 0.2rem solid #d4d6db;
+            border-radius: 0.5rem;
+        }
+    }
+    &__question {
+        cursor: pointer;
+        font-weight: bold;
+        @include flex($jc:space-between,$ai:center)
+    }
+    &__answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    &__input:checked + &__question + &__answer {
+        margin-top: 1rem;
+        max-height: 500px;
+    }
+    &__svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: 0.5s ease-in-out;
+        fill: $main-color;
+    }
+    &__input:checked + &__question > &__svg{
+        transform: rotate(-90deg);
+    }
+}

@@ -1,0 +1,22 @@
+.footer {
+    background-color: #213081;
+    color: white;
+    margin-top: 4rem;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 700;
+    }
+    &__image {
+        width: 4rem;
+        height: 4rem;
+    }
+}
