@@ -1,0 +1,13 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+    @include grid($main-padding * 4);
+}

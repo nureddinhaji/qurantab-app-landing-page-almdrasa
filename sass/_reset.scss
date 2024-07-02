@@ -14,6 +14,7 @@ ol {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 button {
@@ -22,4 +23,5 @@ button {
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
