@@ -1,3 +1,4 @@
+@use "./variables" as *;
 @use "./mixins" as *;
 
 .header {
@@ -17,5 +18,10 @@
     &__nav {
         @include flex(null, 1rem);
         font-size: 1.75rem;
+    }
+    &__link {
+        &:hover, &:active {
+            color: $main-color;
+        }
     }
 }

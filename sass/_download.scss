@@ -1,0 +1,54 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./extend" as *;
+@use "./main";
+
+.download {
+    @extend %flex-center;
+    gap: $main-padding * 2;
+
+    &__header {
+        @extend %flex-center;
+        gap: $main-padding;
+    }
+    &__boxes {
+        @include grid(4rem, repeat(3, 1fr));
+        width: 100%;
+    }
+    &__h3 {
+        @extend .feature__h3;
+    }
+    &__p {
+        @extend .feature__p;
+        text-align: center;
+    }
+    &__h4 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    &__box {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: .5rem;
+        &-header {
+            padding: $main-padding * 2;
+            @extend %flex-center;
+            gap: 1rem;
+        }
+        &-svg {
+            width: 8rem;
+            height: 8rem;
+        }
+        &-footer {
+            padding: $main-padding;
+            border-top: 2px dashed #d4d6db;
+            @extend %flex-center;
+        }
+        &-link {
+            @extend %button;
+            &-svg {
+                @extend %download-svg;
+            }
+        }
+    }
+    
+}

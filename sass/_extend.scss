@@ -1,0 +1,25 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+%flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%button {
+    @include flex(null, 1rem, center, center);
+    padding: calc($main-padding/2) $main-padding;
+    background-color: $main-color;
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+%download-svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+}

@@ -1,10 +1,11 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./extend" as *;
 
 .main {
     @include grid($main-padding * 4);
 }
-.section {
+.feature {
     @include grid($main-padding * 2, repeat(2, 1fr));
     &__text {
         @include flex(column, $main-padding, center);
@@ -25,17 +26,10 @@
         @include flex($g: $main-padding);
     }
     &__link {
-        @include flex(null, 1rem, center, center);
-        padding: calc($main-padding/2) $main-padding;
-        background-color: $main-color;
-        color: white;
-        border-radius: 0.5rem;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        @extend %button;
     }
     &__svg {
-        width: 2rem;
-        fill: white;
+        @extend %download-svg;
     }
     &__image {
         max-width: 100%;
