@@ -21,7 +21,8 @@
     }
     &__link {
         transition: 0.3s;
-        &:hover, &:active {
+        &:hover,
+        &:active {
             color: $main-color;
         }
     }
