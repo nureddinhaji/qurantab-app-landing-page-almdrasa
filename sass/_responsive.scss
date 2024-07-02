@@ -1,7 +1,7 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 675px) {
     .container {
         gap: $main-padding * 2;
     }

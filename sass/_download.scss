@@ -26,8 +26,9 @@
         font-weight: bold;
     }
     &__box {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        border-radius: .5rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: 0.5rem;
         &-header {
             padding: $main-padding * 2;
             @extend %flex-center;
@@ -44,10 +45,14 @@
         }
         &-link {
             @extend %button;
+            width: 100%;
             &-svg {
                 @extend %download-svg;
             }
+            &--soon {
+                background-color: #82858d;
+                cursor: no-drop;
+            }
         }
     }
-    
 }
